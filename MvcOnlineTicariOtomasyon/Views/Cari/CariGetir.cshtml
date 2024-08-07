@@ -1,0 +1,34 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Musteri
+@{
+    ViewBag.Title = "CariGetir";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Cari Güncelleme Ekranı</h2>
+<br />
+@using (Html.BeginForm("CariGuncelle", "Cari", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.HiddenFor(x => x.MusteriID)
+    @Html.LabelFor(x => x.MusteriAdi)
+    @Html.TextBoxFor(x => x.MusteriAdi, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.MusteriAdi, "", new { @style = "color:red" })
+    <br />
+    @Html.LabelFor(x => x.MusteriSoyAdi)
+    @Html.TextBoxFor(x => x.MusteriSoyAdi, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.MusteriSoyAdi, "", new { @style = "color:orange" })
+    <br />
+    @Html.LabelFor(x => x.CariSehir)
+    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.MusteriMail)
+    @Html.TextBoxFor(x => x.MusteriMail, new { @class = "form-control" })
+    <br />
+      @Html.LabelFor(x => x.Telno)
+    @Html.TextBoxFor(x => x.Telno, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Telno, "", new { @style = "color:orange" })
+    <br />
+    <button class="btn btn-default" style="background-color:yellowgreen">Güncelle</button>
+</div>
+}

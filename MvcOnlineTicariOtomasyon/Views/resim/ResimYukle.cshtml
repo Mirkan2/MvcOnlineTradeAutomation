@@ -1,0 +1,13 @@
+﻿
+@{
+    Layout = null;
+}
+
+<h2>Merhaba</h2>
+<br />
+@using (Html.BeginForm("ResimYukle", "resim", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.TextBox("httpPostedFileBase", "", new { type = "File" })
+
+    <input type="submit" value="Resim Seç" />
+}

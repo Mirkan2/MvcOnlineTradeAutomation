@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "test";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h2>test</h2>
+
+@{
+    var grfik = new Chart(width: 400, height: 400);
+    grfik.AddTitle(text: "Akdeniz Bölgesi Şehirleri");
+    grfik.AddLegend(title: "Nufus");
+    grfik.AddSeries(
+        name: "Deger",
+        chartType:"Pie",
+        xValue: new[] { "Adana", "Antalya", "Isparta" },
+        yValues: new[] { 80, 60, 40 }
+                );
+    grfik.Write();
+}

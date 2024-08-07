@@ -1,0 +1,36 @@
+﻿@using MvcOnlineTicariOtomasyon.Models.Siniflar
+@model List<Musteri>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<br />
+<table class="table table-striped">
+    <tr>
+
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Telefon</th>
+        <th>Mail</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Satış Geçmişi</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+          
+            <td>@x.MusteriAdi</td>
+            <td>@x.MusteriSoyAdi</td>
+            <td>@x.CariSehir</td>
+            <td>@x.Telno</td>
+            <td>@x.MusteriMail</td>
+            <td><a href="/Cari/CariSil/@x.MusteriID" class=" btn btn-danger">Sil</a></td>
+            <td><a href="/Cari/CariGetir/@x.MusteriID" class=" btn btn-warning">Güncelle</a></td>
+            <td><a href="/Cari/MusteriSatis/@x.MusteriID" class=" btn btn-default" style="background-color:lightcoral">Satış Geçmişi</a></td>
+        </tr>
+    }
+</table>
+<a href="/Cari/YeniCari/" class="btn btn-info">Yeni Cari Ekle</a>
+

@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MvcOnlineTicariOtomasyon.Models.Siniflar.GrupSinifi2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>Test</th>
+            <th>Progress</th>
+            <th style="width: 40px">Label</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+        <tr>
+            <td>1.</td>
+            <td>@x.Gorev</td>
+            <td>
+                <div class="progress progress-xs">
+                    <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                </div>
+            </td>
+            <td><span class="badge bg-danger">55%</span></td>
+        </tr>}
+
+    </tbody>
+</table>
+

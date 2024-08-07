@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MvcOnlineTicariOtomasyon.Models.Siniflar.Class2>
+merhaba 
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <td>ŞEHİR</td>
+        <td>ADET</td>
+    </tr>
+    @foreach(var x in Model)
+    {
+        <tr>
+            <td>@x.sehir</td>
+            <td>@x.sayi</td>
+        </tr>
+    }
+</table>

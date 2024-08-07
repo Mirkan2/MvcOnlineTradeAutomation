@@ -1,0 +1,28 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Musteri
+@{
+    ViewBag.Title = "YeniCari";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<br />
+<h2>Yeni Cari Sayfası</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.MusteriAdi)
+    @Html.TextBoxFor(x => x.MusteriAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.MusteriSoyAdi)
+    @Html.TextBoxFor(x => x.MusteriSoyAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.CariSehir)
+    @Html.TextBoxFor(x => x.CariSehir, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Telno)
+    @Html.TextBoxFor(x => x.Telno, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.MusteriMail)
+    @Html.TextBoxFor(x => x.MusteriMail, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+

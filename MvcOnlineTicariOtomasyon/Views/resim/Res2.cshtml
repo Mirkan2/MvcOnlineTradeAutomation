@@ -1,0 +1,16 @@
+﻿
+@{
+    /**/
+
+    Layout = null;
+}
+@using (Html.BeginForm("Res2", "resim", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="form-group">
+        <input type="file" name="ImageFile" />
+        <input type="text" name="Departmanid" />
+        <input type="text" name="PersonelAd" />
+        <input type="text" name="PersonelSoyad" />
+        <button>Kaydet</button>
+    </div>
+}

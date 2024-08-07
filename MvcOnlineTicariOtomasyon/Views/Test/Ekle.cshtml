@@ -1,0 +1,19 @@
+﻿@model MvcOnlineTicariOtomasyon.Models.Siniflar.Personel
+@{
+    Layout = null;
+}
+
+<h2>Personel Ekleme Formu</h2>
+<br /><br />
+@using (Html.BeginForm("Ekle", "Test", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <p>Personel Adı</p>
+    @Html.TextBoxFor(x => x.PersonelAd)
+    <p>Personel Soyadı</p>
+    @Html.TextBoxFor(x => x.PersonelSoyad)
+    <p>Personel Departman</p>
+    @Html.TextBoxFor(x => x.Departmanid)
+    <p>Personel Görsel</p>
+    <input type="file" name="PersonelGorsel" />
+    <input type="submit" value="Kaydet" />
+}

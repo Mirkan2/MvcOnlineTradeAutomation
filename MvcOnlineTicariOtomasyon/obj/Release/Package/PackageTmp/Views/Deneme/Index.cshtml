@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div>
+    @using (Html.BeginForm("Index", "Deneme", FormMethod.Post))
+    {
+        <input type="text" name="kod" />
+        <input type="submit" value="Oluştur" />
+    }
+    <br />
+    @if (ViewBag.karekodimage != null)
+    {
+        <img src="@ViewBag.karekodimage" alt="" style="width:400px; height:400px;" />
+    }
+</div>
